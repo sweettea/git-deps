@@ -9,7 +9,7 @@ from dataclasses import dataclass
 @dataclass
 class GitRef:
     """
-    A reference to a commit
+    A reference to a commit, mimicking pygit2.Oid behavior
     """
     hex: str
 
@@ -17,7 +17,7 @@ class GitRef:
 class BlameHunk:
     """
     A chunk of a blame output which has the same commit information
-    for a consecutive set of lines
+    for a consecutive set of lines, mimicking pygit2.BlameHunk
     """
     orig_commit_id: GitRef
     orig_start_line_number: int
