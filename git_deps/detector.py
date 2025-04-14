@@ -355,7 +355,7 @@ class DependencyDetector(object):
             dirent = segments.pop(0)
             if isinstance(tree_or_blob, pygit2.Tree):
                 if dirent in tree_or_blob:
-                    tree_or_blob = self.repo[tree_or_blob[dirent].oid]
+                    tree_or_blob = self.repo[tree_or_blob[dirent].id]
                     # self.logger.debug("  %s in %s" % (dirent, path))
                     if path:
                         path += '/'
